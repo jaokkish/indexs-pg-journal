@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pg官网 · 轻量导航介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f9fafc;
+            color: #1e293b;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 1.8rem 3.5rem;
+        }
+
+        /* ---- 顶部导航 ---- */
+        .top-nav {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .site-name {
+            font-weight: 600;
+            font-size: 1.15rem;
+            letter-spacing: 0.02em;
+            color: #0f172a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #475569;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-links a.highlight {
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        /* ---- 标题体系 ---- */
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            line-height: 1.25;
+            margin-bottom: 1.2rem;
+            color: #0f172a;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-top: 2.8rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+            border-left: 4px solid #2563eb;
+            padding-left: 0.85rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+
+        /* ---- 正文 & 段落 ---- */
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        .subhead {
+            color: #475569;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        /* ---- 卡片网格 场景模块 ---- */
+        .scene-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.6rem;
+            margin: 1.8rem 0 0.8rem;
+        }
+
+        .scene-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 1.6rem 1.2rem 1.4rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02), 0 4px 12px rgba(0,0,0,0.04);
+            transition: transform 0.15s ease, box-shadow 0.2s;
+            border: 1px solid #f1f5f9;
+        }
+
+        .scene-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            border-color: #dbeafe;
+        }
+
+        .scene-card .emoji {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+
+        .scene-card .card-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 0.3rem;
+            color: #0f172a;
+        }
+
+        .scene-card p {
+            font-size: 0.9rem;
+            color: #475569;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* ---- 常见说明（FAQ 摘要） ---- */
+        .faq-block {
+            margin-top: 2.8rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.6rem;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            color: #0f172a;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item .a {
+            color: #475569;
+            font-size: 0.95rem;
+            padding-left: 0.2rem;
+        }
+
+        /* ---- 按钮 / 链接装饰 ---- */
+        .inline-link {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        .inline-link:hover {
+            border-bottom-color: #2563eb;
+        }
+
+        .more-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #2563eb;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-bottom: 1px solid transparent;
+            transition: border 0.15s;
+        }
+
+        .more-link:hover {
+            border-bottom-color: #2563eb;
+        }
+
+        /* ---- 响应式 ---- */
+        @media (max-width: 680px) {
+            .page {
+                padding: 1.8rem 1.2rem 2.8rem;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .scene-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+
+            .top-nav {
+                flex-direction: column;
+                gap: 0.8rem;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .page {
+                padding: 1.2rem 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .scene-card {
+                padding: 1.2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <span class="site-name">indexs‑pg</span>
+        <div class="nav-links">
+            <a href="#intro">概览</a>
+            <a href="#scenes">场景</a>
+            <a href="#faq">说明</a>
+            <a href="https://indexs-pg.com" class="highlight">pg官网</a>
+        </div>
+    </nav>
+
+    <!-- hero / 核心介绍 -->
+    <section id="intro">
+        <h1>快速识别网站用途<br>从 pg官网 开始</h1>
+        <p class="subhead">
+            当你打开一个不熟悉的网站，最直接的问题是：<em>这个页面能做什么？</em>
+            我们围绕「轻量导航式」结构，让你在几秒内建立对 <a href="https://indexs-pg.com" class="inline-link">pg官网</a> 的功能认知，无需反复摸索。
+        </p>
+        <p>
+            整个页面由三个层次组成：顶部导航提供全局入口；核心介绍区简述站点定位；三个场景模块分别对应最常见的使用意图。最后附一段常见说明，回应初次接触时容易产生的疑问。这种结构本身就是为了降低认知负荷——你不必读完所有文字，就能判断这里是否与你的需求匹配。
+        </p>
+        <p>
+            很多人习惯先看“官网”两个字，但更关键的是理解背后的信息组织方式。如果你此前对 <a href="https://indexs-pg.com" class="inline-link">pg官网</a> 的印象停留在较浅的层面，下面几个模块或许会让你重新认识它的实用边界。
+        </p>
+    </section>
+
+    <!-- 三个场景模块 -->
+    <section id="scenes">
+        <h2>三个常见使用场景</h2>
+        <div class="scene-grid">
+            <div class="scene-card">
+                <span class="emoji">🧭</span>
+                <div class="card-title">快速定位功能入口</div>
+                <p>访问者通常带着明确目标：查文档、看公告、找资源。导航区直接呈现关键链接，无需在首页停留过久。首页承担的是“目录”角色，而非信息仓库。</p>
+            </div>
+            <div class="scene-card">
+                <span class="emoji">📘</span>
+                <div class="card-title">理解站点能力边界</div>
+                <p>通过场景卡片，你可以评估该网站是否覆盖你关心的领域。三个模块分别对应信息获取、工具使用、内容参考——基本覆盖大部分初次访问的需求。</p>
+            </div>
+            <div class="scene-card">
+                <span class="emoji">🔗</span>
+                <div class="card-title">确认官方信息源头</div>
+                <p>在信息碎片化时代，找到可靠的来源本身就是一种效率。首页内的链接统一指向 <a href="https://indexs-pg.com" class="inline-link">pg官网</a>，所有介绍均以此为基准，避免第三方解读带来的偏差。</p>
+            </div>
+        </div>
+        <p style="margin-top: 1.2rem; color: #475569; font-size: 0.95rem;">
+            当然，实际场景远不止三种。但这些模块可以作为起点——当你需要判断某个网站是否值得深入使用时，类似的导航式切入往往比大段描述更直接。
+        </p>
+    </section>
+
+    <!-- 常见说明 (FAQ 摘要) -->
+    <section id="faq" class="faq-block">
+        <h2>常见说明</h2>
+        <div class="faq-item">
+            <span class="q">▸ 这个页面是 pg官网 的全部内容吗？</span>
+            <span class="a">不是。首页仅作为介绍与导航的轻量入口，完整的功能界面、文档或工具需要点击上方导航栏中的「pg官网」或其他链接进入。</span>
+        </div>
+        <div class="faq-item">
+            <span class="q">▸ 为什么首页内容这么简洁？</span>
+            <span class="a">简洁是为了让首次访问的人能快速抓住重点。隐藏次要信息、突出结构，比一次性堆砌所有内容更容易建立认知地图。</span>
+        </div>
+        <div class="faq-item">
+            <span class="q">▸ 我可以从哪里获取更详细的帮助？</span>
+            <span class="a">推荐直接访问 <a href="https://indexs-pg.com" class="inline-link">pg官网</a> 内对应的说明页面。首页不替代具体文档，但会提供清晰的指引路径。</span>
+        </div>
+        <div class="faq-item">
+            <span class="q">▸ 页面里的链接是否都指向同一来源？</span>
+            <span class="a">是的。无论你看到哪处链接，只要文本为「pg官网」，均指向 https://indexs-pg.com 。其他内部链接（如导航中的项目）同样基于同一站点结构。</span>
+        </div>
+    </section>
+
+    <!-- 底部留白 + 软引用 -->
+    <div style="margin-top: 3rem; border-top: 1px solid #e2e8f0; padding-top: 1.8rem; font-size: 0.9rem; color: #64748b; text-align: left;">
+        <p style="margin-bottom: 0.2rem;">本页面为轻量导航式介绍页，内容仅供功能说明，不构成任何承诺或诱导。</p>
+        <p style="margin-bottom: 0;">如有疑问，请直接参考 <a href="https://indexs-pg.com" class="inline-link">pg官网</a> 上的正式信息。</p>
+    </div>
+</div>
+</body>
+</html>
