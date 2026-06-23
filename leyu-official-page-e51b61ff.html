@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐鱼 · 简明指南与访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f8f3eb;
+            font-family: 'Georgia', 'Times New Roman', '宋体', SimSun, serif;
+            color: #2e2a24;
+            line-height: 1.7;
+            padding: 2.5rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 820px;
+            width: 100%;
+            background: #fcf9f4;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.02);
+            padding: 2.8rem 2.2rem;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 1.2rem 0.8rem; }
+            .page { padding: 1.8rem 1.2rem; }
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #3f372f;
+            border-left: 5px solid #b7a48e;
+            padding-left: 1rem;
+            margin-bottom: 1.6rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-top: 2.6rem;
+            margin-bottom: 0.9rem;
+            color: #4d4237;
+            border-bottom: 1px solid #e0d6ca;
+            padding-bottom: 0.3rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-top: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #5a4e41;
+        }
+
+        p {
+            margin-bottom: 1.15rem;
+            text-align: justify;
+        }
+
+        a {
+            color: #6b5a4a;
+            text-decoration: underline;
+            text-underline-offset: 0.15em;
+            text-decoration-color: #cdbbaa;
+            transition: color 0.2s, text-decoration-color 0.2s;
+        }
+
+        a:hover {
+            color: #3f3022;
+            text-decoration-color: #3f3022;
+        }
+
+        .hero-note {
+            background: #f0e8dd;
+            border-radius: 18px;
+            padding: 1.4rem 1.6rem;
+            margin: 1.6rem 0 1.2rem;
+            font-style: normal;
+            border: 1px solid #e2d5c5;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .hero-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        .quote-block {
+            background: #f5efe7;
+            border-left: 6px solid #c1ac94;
+            padding: 1.2rem 1.6rem;
+            margin: 1.8rem 0;
+            border-radius: 0 12px 12px 0;
+            color: #3f362e;
+        }
+
+        .quote-block p {
+            margin-bottom: 0.5rem;
+        }
+        .quote-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tip-box {
+            background: #ede7dd;
+            border-radius: 16px;
+            padding: 1.2rem 1.6rem;
+            margin: 1.8rem 0;
+            border: 1px dashed #c5b5a2;
+        }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.6rem 0;
+        }
+
+        @media (max-width: 540px) {
+            .grid-info {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .info-card {
+            background: #f5efe7;
+            border-radius: 14px;
+            padding: 1rem 1.2rem;
+            border: 1px solid #e2d5c5;
+        }
+
+        .info-card p {
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+        .info-card strong {
+            display: block;
+            font-weight: 600;
+            color: #4d3f33;
+            font-size: 1.05rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+        .faq-item .q {
+            font-weight: 600;
+            color: #4d3f33;
+            margin-bottom: 0.15rem;
+        }
+        .faq-item .a {
+            padding-left: 1.2rem;
+            color: #4f443a;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd0bf;
+            margin: 2rem 0 1.2rem;
+        }
+
+        .footer-note {
+            font-size: 0.9rem;
+            color: #7b6e60;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e3d6c7;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <h1>乐鱼 · 知识库入口</h1>
+
+    <div class="hero-note">
+        <p>这是一份经过整理的简明说明页，旨在为使用 <a href="https://leyu--official.com">乐鱼</a> 的朋友提供清晰的结构指引与日常提醒。内容保持平实，不夸大也不省略重要细节，适合作为快速查阅的起点。</p>
+        <p>你可以将本页视为一个轻量的知识库目录，从中了解基本概念、访问注意事项以及常见问题摘要。</p>
+    </div>
+
+    <h2>指南区 · 从何处开始</h2>
+    <p>如果你初次接触 <a href="https://leyu--official.com">乐鱼</a>，建议先浏览以下三个基础方向：</p>
+    <ul style="margin-left: 1.6rem; margin-bottom: 1.2rem; list-style: square; color: #4d4237;">
+        <li>了解服务定位：平台主要提供哪类内容或功能，适用场景是什么。</li>
+        <li>熟悉界面布局：注意导航分区、设置选项以及帮助入口的位置。</li>
+        <li>留意官方渠道：始终通过可靠方式访问，避免第三方修改页面。</li>
+    </ul>
+
+    <div class="quote-block">
+        <p><strong>简明提醒：</strong> 任何与账户或隐私相关的操作，都建议在确认页面地址无误后完成。不要轻易通过非官方链接提交信息。</p>
+    </div>
+
+    <h2>提示区 · 访问与使用提醒</h2>
+
+    <div class="tip-box">
+        <p><strong>1. 环境与设备</strong><br>
+        推荐在稳定的网络环境下使用，同时保持浏览器为较新版本。部分功能可能依赖标准 web 技术，老旧浏览器或异常插件可能影响体验。</p>
+        <p style="margin-top: 0.8rem;"><strong>2. 安全基础</strong><br>
+        建议开启设备的基础防护，避免使用公共设备保存登录状态。定期清理缓存与站点数据也是一种好习惯。</p>
+    </div>
+
+    <div class="grid-info">
+        <div class="info-card">
+            <strong>快捷参考</strong>
+            <p>主页结构通常包含信息区、工具区和个人中心。</p>
+            <p>帮助页面内提供了较详细的分类说明。</p>
+        </div>
+        <div class="info-card">
+            <strong>异常处理</strong>
+            <p>如果页面加载异常，先检查网络与地址是否正确。</p>
+            <p>持续出现提示时，可尝试更换时段或设备。</p>
+        </div>
+    </div>
+
+    <h2>相关信息区 · 常见问题摘要</h2>
+
+    <div class="faq-item">
+        <div class="q">问：如何确认我访问的是官方页面？</div>
+        <div class="a">答：核对浏览器地址栏显示的域名是否为 <strong>leyu--official.com</strong>。建议将可靠地址保存在书签中，每次从书签进入。</div>
+    </div>
+    <div class="faq-item">
+        <div class="q">问：忘记部分设置的位置，该怎么办？</div>
+        <div class="a">答：可以在个人区域或系统设置中查找分类标签。如果找不到，不妨使用站内搜索功能（如有）或查阅帮助中心。</div>
+    </div>
+    <div class="faq-item">
+        <div class="q">问：页面部分区域显示异常，可能是什么原因？</div>
+        <div class="a">答：常见原因包括：浏览器缓存未刷新、网络波动、或者使用了与页面不兼容的扩展程序。尝试无痕模式或更换浏览器有助于定位问题。</div>
+    </div>
+    <div class="faq-item">
+        <div class="q">问：是否有必要注册账户才能浏览所有内容？</div>
+        <div class="a">答：这取决于具体功能区域。公开信息区通常无需登录，而个性化服务或记录功能可能需要注册。以页面实际指引为准。</div>
+    </div>
+
+    <hr>
+
+    <p style="font-size: 0.98rem; background: #f3ece3; padding: 0.8rem 1.2rem; border-radius: 12px;">
+        <strong>关于本页：</strong> 本文档为独立整理的介绍与提醒页面，内容基于一般使用场景编写，不构成任何形式的保证或承诺。所有操作请以 <a href="https://leyu--official.com">乐鱼</a> 官方页面实际展示为准。
+    </p>
+
+    <div class="footer-note">
+        <p>页面内容日常整理 · 保留基本条款与说明</p>
+        <p style="margin-top: 0.2rem; font-size: 0.85rem; color: #9b8d7c;">— 知识库入口 · 目录感布局 —</p>
+    </div>
+
+</div>
+</body>
+</html>
